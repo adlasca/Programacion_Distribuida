@@ -20,6 +20,7 @@ java {
 
 dependencies {
     implementation(enforcedPlatform("io.quarkus.platform:quarkus-bom:$quarkusVersion"))
+
     //JPA
     implementation("io.quarkus:quarkus-hibernate-orm-panache")
     implementation("io.quarkus:quarkus-hibernate-orm")
@@ -28,6 +29,9 @@ dependencies {
     implementation("io.quarkus:quarkus-rest")
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-rest-jsonb")
+    //Control de cambios de BD
+    implementation("io.quarkus:quarkus-flyway")
+    runtimeOnly("org.flywaydb:flyway-database-postgresql:13.12.2")
 
 }
 

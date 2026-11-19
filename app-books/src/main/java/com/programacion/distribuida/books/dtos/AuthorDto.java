@@ -5,7 +5,6 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-@Builder
 @NoArgsConstructor
 public class AuthorDto {
 

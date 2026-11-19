@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface BookService {
 
-    public List<BookDto> findAll();
+    List<BookDto> findAll();
 
-    public Optional<BookDto> findByIdOptional(String isbn);
+    Optional<BookDto> findByIdOptional(String isbn);
 }
