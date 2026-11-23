@@ -32,6 +32,8 @@ dependencies {
     implementation("io.quarkus:quarkus-rest-client-jsonb")
     implementation("io.quarkus:quarkus-rest-client")
 
+    //Service Discovery
+    implementation("io.smallrye.reactive:smallrye-mutiny-vertx-consul-client")
 
 
 
