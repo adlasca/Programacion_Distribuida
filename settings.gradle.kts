@@ -3,3 +3,5 @@ rootProject.name = "Programacion_Distribuida"
 //include("web02")
 include("app-authors")
 include("app-books")
+include("app-customers")
+include("app-customers")

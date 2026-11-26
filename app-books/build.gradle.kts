@@ -35,8 +35,8 @@ dependencies {
     //Service Discovery
     implementation("io.smallrye.reactive:smallrye-mutiny-vertx-consul-client")
 
-
-
+    //Load Balancer
+    implementation("io.quarkus:quarkus-smallrye-stork")
 }
 
 tasks.withType<JavaCompile> {

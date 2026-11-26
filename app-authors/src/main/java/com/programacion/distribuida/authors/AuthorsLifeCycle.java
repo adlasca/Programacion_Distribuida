@@ -32,10 +32,11 @@ public class AuthorsLifeCycle {
     String appName;
 
     String serviceId;
+    String ipAddress;
 
     @PostConstruct
     public  void construct(){
-        String ipAddress="127.0.0.1";
+        ipAddress="127.0.0.1";
         serviceId = "%s-%s:%d".formatted(appName,ipAddress,appPort);
     }
 
@@ -47,8 +48,6 @@ public class AuthorsLifeCycle {
                     .setPort(consulPort);
 
             ConsulClient client = ConsulClient.create(vertx,options);
-
-            String ipAddress = "127.0.0.1";
 
             ServiceOptions serviceOptions = new ServiceOptions()
                     .setName(appName)
@@ -63,8 +62,6 @@ public class AuthorsLifeCycle {
         }catch (Exception ex){
          ex.printStackTrace();
         }
-
-
     }
 
     public void destroy(@Observes ShutdownEvent event, Vertx vertx){
@@ -75,8 +72,6 @@ public class AuthorsLifeCycle {
                     .setPort(consulPort);
 
             ConsulClient client = ConsulClient.create(vertx,options);
-
-            String ipAddress = "127.0.0.1";
 
             ServiceOptions serviceOptions = new ServiceOptions()
                     .setName(appName)
